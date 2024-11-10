@@ -52,6 +52,12 @@ app.get(
   }
 );
 
+// Catch-all route for other requests
+app.get('*', (req, res) => {
+     res.status(404).send('404: NOT_FOUND');
+   });
+   
+
 app.listen(port, () => {
   console.log(`Server Started On http://localhost:${port}`);
 });
