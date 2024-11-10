@@ -343,7 +343,7 @@ export const menu_list = [
         },
         {
           _id: "29",
-          name: "Buttter Noodles",
+          name: "Butter Noodles",
           image: food_29,
           price: 179,
           description: "Simple and comforting noodles with butter, garlic, and a dash of herbs.",
