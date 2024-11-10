@@ -30,7 +30,8 @@ const Cart = () => {
                   <p>₹{item.price}</p>
                   <p>{cartItems[item._id]}</p>
                   <p>₹{item.price * cartItems[item._id]}</p>
-                  <p onClick={()=>removeFromCart(item._id)} className='cross'>x</p>
+                  <button onClick={()=>removeFromCart(item._id)} class="custom-button">Remove</button>
+                  {/* <p onClick={()=>removeFromCart(item._id)} className='cross'>x</p> */}
                 </div>
                 <hr />
               </>
@@ -59,7 +60,7 @@ const Cart = () => {
           </div>
           <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
         </div>
-        <div className="cart-promocode">
+        {/* <div className="cart-promocode">
           <div>
             <p>Apply Promo Code</p>
             <div className="cart-promocode-inputs">
@@ -67,7 +68,7 @@ const Cart = () => {
               <button>Submit</button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

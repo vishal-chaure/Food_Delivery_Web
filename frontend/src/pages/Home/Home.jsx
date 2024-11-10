@@ -11,10 +11,6 @@ const Home = () => {
 
   return (
     <div className='home'>
-      <div className="color">
-        {/* <Header /> */}
-        {/* <Search /> */}
-      </div>
       <ExploreMenu category={category} setCategory={setCategory}/>
       <FoodDisplay  category={category} />
     </div>

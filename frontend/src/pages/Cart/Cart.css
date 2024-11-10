@@ -35,6 +35,7 @@
      display: flex;
      flex-direction: column;
      gap: 20px;
+     padding-top: 40px;
 }
 .cart-total-details{
      display: flex;
@@ -91,3 +92,18 @@
           justify-content: start;
      }
 }
+
+.custom-button {
+     background-color: #ffcccc; /* Light red */
+     color: #333; /* Dark text color */
+     padding: 4px 9px;
+     border: none;
+     border-radius: 8px; /* Rounded corners */
+     cursor: pointer;
+     font-size: 16px;
+     transition: background-color 0.3s ease;
+ }
+ 
+ .custom-button:hover {
+     background-color: #ff9999; /* Darker red on hover */
+ }
