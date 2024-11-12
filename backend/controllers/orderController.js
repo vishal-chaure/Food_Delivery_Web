@@ -19,7 +19,7 @@ const placeOrder = async (req, res) => {
                payment: false, // Initially, payment is false
                status: "Pending" // Add an initial status if needed
           })
-          await newOrder.save();
+          await newOrder.save(); 
 
           // Optionally clear the cart data for the user
           await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
@@ -36,7 +36,7 @@ const placeOrder = async (req, res) => {
      }
 }
 
-// // placing user order for frontend
+// // placing user order for frontend with Stripe . also change frontend file src/pages/placeOrder
 // const placeOrder = async (req, res) => {
 
 //      const frontend_url = process.env.FRONTEND_URL;
