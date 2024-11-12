@@ -9,11 +9,14 @@ import userRouter from './routes/userRoute.js';
 import cartRouter from './routes/cartRoute.js';
 import orderRouter from './routes/orderRoute.js';
 import 'dotenv/config';
+import path from "path";
 
 const app = express();
 const port = 4000;
 
 const vishal_chaure_ = 0;
+
+const __dirname = path.resolve();
 
 // Middleware
 app.use(express.json());
@@ -50,14 +53,21 @@ app.get(
   '/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
-    res.redirect('http://localhost:5174/?user=${userId}'); // Redirect to your frontend on successful login
+    res.redirect(`${process.env.FRONTEND_URL}/?user=${req.user._id}`); 
+    // res.redirect('http://localhost:5174/?user=${userId}'); // Redirect to your frontend on successful login
   }
 );
 
-// Catch-all route for other requests
-app.get('*', (req, res) => {
-     res.status(404).send('404: NOT_FOUND');
-   });
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+// // Catch-all route for other requests
+// app.get('*', (req, res) => {
+//      res.status(404).send('404: NOT_FOUND');
+//    });
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
    
 
 app.listen(port, () => {
