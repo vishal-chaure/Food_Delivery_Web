@@ -1,48 +1,13 @@
 import orderModel from "../models/orderModel.js";
 import userModel from "../models/userModel.js"
 import Stripe from "stripe"
-// const Stripe = require('stripe');
 
-// const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-// const Stripe = require('stripe');
-// const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
-
-// // placing user order without Stripe integration
-// const placeOrder = async (req, res) => {
-//      const frontend_url = process.env.FRONTEND_URL;
-
-//      try {
-//           // Create and save the new order
-//           const newOrder = new orderModel({
-//                userId: req.body.userId,
-//                items: req.body.items,
-//                amount: req.body.amount,
-//                address: req.body.address,
-//                payment: false, // Initially, payment is false
-//                status: "Pending" // Add an initial status if needed
-//           })
-//           await newOrder.save(); 
-
-//           // Optionally clear the cart data for the user
-//           await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
-
-//           // Respond to the frontend with success
-//           res.json({
-//                success: true,
-//                message: "Order placed successfully",
-//                orderId: newOrder._id
-//           });
-//      } catch (error) {
-//           console.log(error);
-//           res.json({ success: false, message: "Error placing order" });
-//      }
-// }
-
-// placing user order for frontend with Stripe . also change frontend file src/pages/placeOrder
+// placing user order for frontend
 const placeOrder = async (req, res) => {
 
-     const frontend_url = process.env.FRONTEND_URL;
+     const frontend_url = "http://localhost:5175"
 
      try {
           const newOrder = new orderModel({

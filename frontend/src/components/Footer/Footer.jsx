@@ -8,7 +8,7 @@ const Footer = () => {
      <div className="footer-content">
           <div className='footer-content-left'>
           <div className="logo-name">Yummie</div>
-               <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum id itaque illo, accusamus atque officia? adipisicing elit. Necessitatibus nihil eos consectetur porro repellat unde!</p>
+               <p>Yummie is a leading food discovery and delivery platform that connects users with restaurants, cafes, and eateries around them. It allows users to explore, order, and enjoy their favorite meals, all with a few taps. Whether you're looking to dine out, order food online, or discover new places, YUMMIE makes it easier than ever.</p>
                <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="" />
                     <img src={assets.twitter_icon} alt="" />
@@ -27,8 +27,8 @@ const Footer = () => {
           <div className='footer-content-right'>
                <h2>GET IN TOUCH</h2>
                <ul>
-                    <li>8374736373</li>
-                    <li>dumy@gmail.com</li>
+                    <li>9326039327</li>
+                    <li>yummie.admin@gmail.com</li>
                </ul>
           </div>
      </div>

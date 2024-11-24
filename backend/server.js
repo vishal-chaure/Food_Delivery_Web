@@ -54,7 +54,7 @@ app.get(
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
     res.redirect(`${process.env.FRONTEND_URL}/?user=${req.user._id}`); 
-    // res.redirect('http://localhost:5174/?user=${userId}'); // Redirect to your frontend on successful login
+    // res.redirect('http://localhost:5175/?user=${userId}'); // Redirect to your frontend on successful login
   }
 );
 
